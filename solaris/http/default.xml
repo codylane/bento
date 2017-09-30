@@ -62,7 +62,7 @@
       <software_data action="uninstall">
         <name>pkg:/server_install</name>
       </software_data>
-   	
+
     </software>
   </ai_instance>
 </auto_install>
