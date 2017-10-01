@@ -17,10 +17,14 @@ echo "basedir=default" >> /tmp/nocheck
 
 echo "all" > /tmp/allfiles
 
-if [ -f /home/vagrant/.vbox_version ]; then
-    mkdir /tmp/vbox
-    VER=$(cat /home/vagrant/.vbox_version)
-    ls
-    sudo -i pkgadd -a /tmp/nocheck -d /media/VBOXADDITIONS_*/VBoxSolarisAdditions.pkg < /tmp/allfiles
-fi
+VAGRANT_HOMEDIR=`/usr/bin/getent passwd vagrant | /usr/bin/cut -d':' -f6`
+if [ -n ${VAGRANT_HOMEDIR} ]; then
+  VBGADEV=`/usr/sbin/lofiadm -a ${VAGRANT_HOMEDIR}/VBoxGuestAdditions.iso`
+  /usr/sbin/mount -F hsfs -o ro ${VBGADEV} /mnt
 
+  /usr/sbin/pkgrm  -a /tmp/nocheck -n SUNWvboxguest
+  /usr/sbin/pkgadd -a /tmp/nocheck -G -d /mnt/VBoxSolarisAdditions.pkg < /tmp/allfiles
+  /usr/sbin/umount /mnt
+  /usr/sbin/lofiadm -d ${VBGADEV}
+  rm -f ${VAGRANT_HOMEDIR}/VBoxGuestAdditions.iso
+fi

@@ -30,7 +30,7 @@
       ],
       "boot_wait": "5s",
       "disk_size": "{{user `disk_size`}}",
-      "guest_additions_mode": "attach",
+      "guest_additions_mode": "upload",
       "guest_os_type": "Solaris11_64",
       "headless": "{{ user `headless` }}",
       "http_directory": "http",
@@ -130,6 +130,7 @@
         "scripts/update.sh",
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
+        "scripts/grub.sh",
         "scripts/minimize.sh"
       ],
       "type": "shell"
