@@ -39,7 +39,7 @@
       "iso_url": "{{user `mirror`}}/sol-11_3-ai-x86.iso",
       "output_directory": "packer-solaris-11.3-x86_64-virtualbox",
       "shutdown_command": "echo 'vagrant'|sudo -i init 5",
-      "shutdown_timeout": "30m",
+      "shutdown_timeout": "15m",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_username": "vagrant",
