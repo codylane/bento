@@ -7,5 +7,7 @@
 # will try to kill the box while the disk is still full and that's bad
 /usr/bin/sync
 
+/usr/bin/echo "File sync complete, gracefully shutting down system"
+
 # To avoid problems with a graceful shutdown we just do it ourselves.
 /usr/sbin/init 5
