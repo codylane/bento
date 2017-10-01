@@ -1,10 +1,11 @@
 #!/bin/sh -ux
 
-dd if=/dev/zero of=/EMPTY bs=1048576
-rm -f /EMPTY
+/usr/bin/dd if=/dev/zero of=/EMPTY bs=1048576
+/usr/bin/rm -f /EMPTY
+
 # Block until the empty file has been removed, otherwise, Packer
 # will try to kill the box while the disk is still full and that's bad
-sync
+/usr/bin/sync
 
 # To avoid problems with a graceful shutdown we just do it ourselves.
-init 5
+/usr/sbin/init 5
