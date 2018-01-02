@@ -206,7 +206,6 @@
   ],
   "variables": {
     "box_basename": "freebsd-11.2",
-    "guest_additions_url": "",
     "build_timestamp": "{{isotime \"20060102150405\"}}",
     "cpus": "1",
     "disk_size": "65536",

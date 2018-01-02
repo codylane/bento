@@ -7,7 +7,6 @@
       "boot_wait": "10s",
       "disk_size": "{{user `disk_size`}}",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_url": "{{user `guest_additions_url`}}",
       "guest_os_type": "RedHat_64",
       "hard_drive_interface": "sata",
       "headless": "{{ user `headless` }}",
@@ -182,12 +181,8 @@
     }
   ],
   "variables": {
-<<<<<<< HEAD:centos/centos-7.5-x86_64.json
     "box_basename": "centos-7.5",
-=======
     "guest_additions_url": "",
-    "box_basename": "centos-7.4",
->>>>>>> Added support for specifying the guest_additions_url as a variable to all the json templates to allow the user to specify a custom VirtualBox Guest Additions ISO if necessary.:centos/centos-7.4-x86_64.json
     "build_timestamp": "{{isotime \"20060102150405\"}}",
     "cpus": "1",
     "disk_size": "65536",

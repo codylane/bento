@@ -138,7 +138,6 @@
     }
   ],
   "variables": {
-    "guest_additions_url": "",
     "_DOWNLOAD_SITE": "http://www.oracle.com/technetwork/server-storage/solaris11/downloads/index.html",
     "_README": "You must download the automated installer iso from the following page, and then place it in the packer_cache dir",
     "arch": "64",

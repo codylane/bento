@@ -205,7 +205,6 @@
     }
   ],
   "variables": {
-    "guest_additions_url": "",
     "box_basename": "freebsd-10.4",
     "build_timestamp": "{{isotime \"20060102150405\"}}",
     "cpus": "1",
