@@ -29,7 +29,6 @@
       "boot_wait": "10s",
       "disk_size": "{{user `disk_size`}}",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_url": "{{user `guest_additions_url`}}",
       "guest_os_type": "Ubuntu_64",
       "hard_drive_interface": "sata",
       "headless": "{{ user `headless` }}",
@@ -292,7 +291,6 @@
   ],
   "variables": {
     "box_basename": "ubuntu-18.04",
-    "guest_additions_url": "",
     "build_timestamp": "{{isotime \"20060102150405\"}}",
     "cpus": "1",
     "disk_size": "65536",
